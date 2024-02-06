@@ -1,0 +1,68 @@
+.choice_container{
+    padding: 30px 15px;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: space-between;
+}
+.choice_container h2, .choice_container > p{
+    text-align: center;
+}
+.choice_container h2{
+    margin-bottom: 15px;
+}
+.choice_container p{
+    color: var(--Grayish-Blue);
+    text-align: center;
+}
+.choice_container > div{
+    margin-top: 40px;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: space-between;
+}
+.choice_box{
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    margin-bottom: 30px;
+    width: 90%;
+}
+.choice_box h3{
+    margin-top: 15px;
+    margin-bottom: 15px;
+}
+
+@media screen and (min-width: 750px){
+    .choice_container{
+        align-items: unset;
+    }
+    .choice_container h2, .choice_container > p{
+        text-align: left;
+        width: 50%;
+    }
+    .choice_container > div{
+        flex-direction: row;
+        /* background-color: red; */
+        gap: 10px;
+    }
+    .choice_box{
+        /* background-color: red; */
+        height: 280px;
+        justify-content: flex-start;
+        align-items: flex-start;
+    }
+    .choice_box p{
+        text-align: left
+    };
+}
+@media screen and (min-width: 1000px){
+    .choice_container h2, .choice_container > p{
+        margin-left: 70px;
+    }
+    .choice_container > div{
+        padding: 10px 70px;
+    }
+}

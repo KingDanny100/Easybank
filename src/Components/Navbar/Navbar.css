@@ -1,0 +1,86 @@
+nav{
+    height: 60px;
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    padding: 15px;
+    background-color: var(--White);
+    position: relative;
+    z-index: 8;
+    padding-right: 25px;
+}
+.desktop_menu, .nav_button{
+    display: none;
+}
+.mobile_menu{
+    position: absolute;
+    top: 70px;
+    /* background-color: var(--Lime-Green); */
+    background-color: var(--Very-Light-Gray);
+    width: 80%;
+    left: 10%;
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+    align-items: center;
+    gap: 15px;
+    padding: 15px;
+    border-radius: 6px;
+    z-index: 9;
+    height: 250px;
+}
+
+@media screen and (min-width: 750px) {
+   .mobile_menu{
+    display: none;
+   } 
+   nav > div{
+    display: none;
+   }
+   nav{
+    /* background-color: blue; */
+    padding: unset;
+    padding-left: 15px;
+    padding-right: 15px;
+   }
+   .desktop_menu{
+    display: flex;
+    gap: 10px;
+    color: var(--Grayish-Blue);
+    /* background-color: red; */
+    height: 100%;
+    align-items: center;
+    justify-content: center;
+    position: relative;
+   }
+   .desktop_menu li{
+    /* background-color: green; */
+    height: 100%;
+    display: flex;
+    align-items: center;
+   }
+   .desktop_menu li:hover{
+    border-bottom: 2px solid var(--Lime-Green);
+    color: var(--Dark-Blue);
+    cursor: pointer;
+   }
+   .nav_button{
+    display: block;
+    background: linear-gradient(90deg, var(--Lime-Green), var(--Bright-Cyan));
+    border: none;
+    padding: 10px 20px;
+    color: var(--White);
+    font-weight: 400;
+    border-radius: 50px;
+    transition: background 1s ease;
+   }
+   .nav_button:hover{
+    cursor: pointer;
+    background: linear-gradient(90deg, var(--Lime-Green),var(--Bright-Cyan), var(--Bright-Cyan));
+   }
+}
+@media screen and (min-width: 1000px){
+    nav{
+        padding: 0px 70px;
+    }
+}
